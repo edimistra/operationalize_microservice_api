@@ -7,7 +7,7 @@ housingapp-b496bfbb5-gtzcq   0/1     ContainerCreating   0          0s
 housingapp-b496bfbb5-rv488   0/1     Terminating         1          71m
 error: error upgrading connection: unable to upgrade connection: pod not found ("housingapp-b496bfbb5-rv488_default")
 
-# 2nd call to ./run_kubernetes.sh - Container is running
+# 2nd call to ./run_kubernetes.sh - Container is running and ./make_predictions.sh is run
 > (.devops) Ericks-MacBook-Pro:operationalize_microservice_api edimistra$ ./run_kubernetes.sh 
 kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
 Error from server (AlreadyExists): deployments.apps "housingapp" already exists
