@@ -1,0 +1,18 @@
+# 1st call to ./run_kubernetes.sh - Container is still creating
+> (.devops) Ericks-MacBook-Pro:operationalize_microservice_api edimistra$ ./run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/housingapp created
+NAME                         READY   STATUS              RESTARTS   AGE
+housingapp-b496bfbb5-gtzcq   0/1     ContainerCreating   0          0s
+housingapp-b496bfbb5-rv488   0/1     Terminating         1          71m
+error: error upgrading connection: unable to upgrade connection: pod not found ("housingapp-b496bfbb5-rv488_default")
+
+# 2nd call to ./run_kubernetes.sh - Container is running
+> (.devops) Ericks-MacBook-Pro:operationalize_microservice_api edimistra$ ./run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "housingapp" already exists
+NAME                         READY   STATUS    RESTARTS   AGE
+housingapp-b496bfbb5-gtzcq   1/1     Running   0          11s
+Forwarding from 127.0.0.1:8080 -> 8080
+Forwarding from [::1]:8080 -> 8080
+Handling connection for 8080
